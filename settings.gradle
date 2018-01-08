@@ -1,0 +1,3 @@
+rootProject.name = 'learning-design-pattern'
+include 'chain'
+
