@@ -3,4 +3,5 @@ include 'chain'
 include 'observer'
 include 'decorator'
 include 'factory'
+include 'command'
 
