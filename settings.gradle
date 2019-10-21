@@ -5,4 +5,5 @@ include 'decorator'
 include 'factory'
 include 'command'
 include 'templateMethod'
+include 'iterator'
 
