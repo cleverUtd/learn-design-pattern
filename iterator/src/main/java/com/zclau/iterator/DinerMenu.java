@@ -2,7 +2,7 @@ package com.zclau.iterator;
 
 import java.util.Iterator;
 
-public class DinerMenu {
+public class DinerMenu implements Menu {
 
 	public static final int MAX_ITEMS = 6;
 	int numberOfItems = 0;
@@ -26,10 +26,8 @@ public class DinerMenu {
 		}
 	}
 
-	public MenuItem[] getMenuItems() {
-		return menuItems;
-	}
 
+	@Override
 	public Iterator createIterator() {
 		return new DinerMenuIterator(menuItems);
 	}

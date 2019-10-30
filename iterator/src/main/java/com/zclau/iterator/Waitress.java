@@ -1,24 +1,20 @@
 package com.zclau.iterator;
 
 import java.util.Iterator;
+import java.util.List;
 
 public class Waitress {
 
-	private PancakeHouseMenu pancakeHouseMenu;
-	private DinerMenu dinerMenu;
+	private List<Menu> menus;
 
-	public Waitress(PancakeHouseMenu pancakeHouseMenu, DinerMenu dinerMenu) {
-		this.pancakeHouseMenu = pancakeHouseMenu;
-		this.dinerMenu = dinerMenu;
+	public Waitress(List<Menu> menus) {
+		this.menus = menus;
 	}
 
 	public void printMenu() {
-		Iterator pancakeIterator = pancakeHouseMenu.createIterator();
-		Iterator dinerIterator = dinerMenu.createIterator();
-		System.out.println("MENU\n----\nBREAKFAST");
-		printMenu(pancakeIterator);
-		System.out.println("\nLUNCH");
-		printMenu(dinerIterator);
+		for (Menu menu : menus) {
+			printMenu(menu.createIterator());
+		}
 	}
 
 	private void printMenu(Iterator iterator) {
