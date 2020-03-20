@@ -8,4 +8,5 @@ include 'templateMethod'
 include 'iterator'
 include 'composite'
 include 'state'
+include 'proxy'
 
